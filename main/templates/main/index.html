@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block titleblock %}Главная страница{% endblock %}
+
+{% block bodyblock %}
+    <div class="div0">
+        <div class="div_head">
+            <h1>Главная страница</h1>
+        </div>
+        <div class="div_main">
+            <p>Для навигации по приложению используйте меню слева.</p>
+            <p>Для перехода на страницу с информацией о приложении нажмите на кнопку</p>
+            <a class="btn btn-primary" href="/about">О приложении</a>
+
+            {% for i in values %}
+                <p>({ i })</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

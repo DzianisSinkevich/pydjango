@@ -1,0 +1,74 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static '/main/css/findata.css' %}">
+{% endblock %}
+
+{% block titleblock %}Личные финансы{% endblock %}
+
+{% block bodyblock %}
+<div class="div0">
+    <div class="div_head">
+        <h1>Личные финансы</h1>
+    </div>
+    <div class="div_main">
+        <div id="line_block">
+            <div class="new_operation">
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.date }}
+                    {{ form.value }}
+                    {{ form.operation }}
+                    {{ form.category }}
+                    <span>{{ error }}</span>
+                    <button class="btn btn-success" type="submit">Добавить операцию</button>
+                </form>
+            </div>
+            <div class="fin_data_main">
+                <table class='table1'>
+                    <th>Дата</th>
+                    <th>Сумма</th>
+                    <th>Операция</th>
+                    <th>Категория</th>
+                    {% for el in fin_data %}
+                    <tr>
+                        <td>{{ el.date }}</td>
+                        <td>{{ el.value }}</td>
+                        <td>{{ el.operation }}</td>
+                        <td>{{ el.category }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div id="line_block" class="fin_data_summ">
+            <div>
+                <p>Доходы</p>
+                <table class='table2'>
+                    <th>Категория</th>
+                    <th>Сумма</th>
+                    {% for el in fin_data_group_income %}
+                    <tr>
+                        <td>{{ el.category }}</td>
+                        <td>{{ el.value }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <p>Расходы</p>
+            </div>
+            <table class='table3'>
+                <th>Категория</th>
+                <th>Сумма</th>
+                {% for el in fin_data_group_expenses %}
+                <tr>
+                    <td>{{ el.category }}</td>
+                    <td>{{ el.value }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {{ html_table |safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}

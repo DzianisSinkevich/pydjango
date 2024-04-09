@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static '/main/css/findata_stat.css' %}">
+{% endblock %}
+
+{% block titleblock %}Статистика по финансам{% endblock %}
+
+{% block bodyblock %}
+<div class="div0">
+    <div class="div_head">
+        <h1>Статистика по финансам</h1>
+    </div>
+    <div class="div_main">
+        <p>Функционал данной страницы в разработке<br><br>
+        Используйте функционал ведения личных финансов.</p>
+        <a class="btn btn-primary" href="/findata">Личные финансы</a>
+    </div>
+</div>
+{% endblock %}

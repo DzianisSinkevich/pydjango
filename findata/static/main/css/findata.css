@@ -1,0 +1,86 @@
+#line_block {
+    width: 50%;
+    height: 85%;
+    float: left;
+    padding: 10px;
+}
+
+.table1 {
+    margin-top: 95px;
+    margin-left: 5px;
+    width: 94.5%;
+    border-radius: 3px;
+}
+
+.table2, .table3 {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.table1 th, td, .table2 th, td, .table3 th, td{
+    height: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff;
+}
+
+.table1 td:first-child, td:last-child {
+    text-align: right;
+}
+
+.table1 th:first-child, td:first-child, th:last-child, td:last-child {
+    width: 160px;
+}
+
+.table1 th, td{
+    width: 120px;
+}
+
+.new_operation {
+    text-align: left;
+}
+
+.new_operation button {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 35px;
+    width: 160px;
+    font-size: 14px;
+}
+
+.fin_data_main {
+    margin-top: 20px;
+}
+
+.post-form {
+    float: left;
+}
+
+.post-form p {
+    margin-left: 10px;
+    text-align: left;
+}
+
+.new_operation input {
+    margin-left: 5px;
+    width: 23%;
+    height: 35px;
+    float: left;
+    text-align: left;
+}
+
+.new_operation select {
+    margin-left: 5px;
+    width: 23%;
+    height: 35px;
+    float: left;
+    text-align: left;
+}
+
+.fin_data_summ p {
+    /* margin: 20px auto; */
+    margin-left: 120px;
+    text-align: left;
+}
