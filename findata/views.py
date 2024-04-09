@@ -6,16 +6,11 @@ import pandas as pd
 
 
 def from_db_to_pandas(dataset):
-    # data = [['Кафе', 10, 'Расход', '2024-04'], ['Зарплата', 100, 'Доход', '2024-04']]
-    # df = pd.DataFrame(data, columns=['Категория', 'Сумма', 'Операция', 'Дата'])
     df = pd.DataFrame()
     df = read_frame(dataset)
-    # print(df)
 
     df = df.groupby(['category', 'operation'])['value'].sum().sort_values(ascending=False).reset_index(name="value")
     dft = pd.DataFrame(df)
-    # dft.columns = ['category', 'operation', 'value']
-    print(dft)
     return dft
 
 
@@ -29,8 +24,6 @@ def findata_home(request):
     form = FinDataForm()
 
     df = from_db_to_pandas(fin_data)
-
-    # html_table = df.to_html()
 
     delete_findatagroup(FinDataGroup)
 

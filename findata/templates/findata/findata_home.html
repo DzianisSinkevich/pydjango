@@ -15,6 +15,10 @@
     <div class="div_main">
         <div id="line_block">
             <div class="new_operation">
+                <p>Формат даты: DD.MM.YYY<br>
+                    Формат суммы: XXX.XX<br>
+                    Категория: 'Доход' или 'Расход'<br>
+                    Операция: 'Зарплата', 'Продукты', 'Товары для дома', 'Кофе', 'Кафе', 'Заправка' или любая другая</p>
                 <form method="POST" class="post-form">
                     {% csrf_token %}
                     {{ form.date }}
