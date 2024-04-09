@@ -15,7 +15,7 @@
 
 ## Технологии
 - [Python](https://www.python.org/)
-- [TensorFlow](https://www.djangoproject.com/)
+- [Django](https://www.djangoproject.com/)
 - [Pandas](https://pandas.pydata.org/)
 - [CSS](https://webref.ru/css)
 
